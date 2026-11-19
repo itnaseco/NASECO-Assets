@@ -29,3 +29,4 @@ naseco_assets.naseco_assets.patches.v1_0.reconcile_insurance_policy_approval_sta
 naseco_assets.naseco_assets.patches.v1_0.add_hr_asset_draft_fields
 naseco_assets.naseco_assets.patches.v1_0.replace_insurance_coverage_with_policy_items
 naseco_assets.naseco_assets.patches.v1_0.drop_legacy_insurance_coverage_table
+naseco_assets.naseco_assets.patches.v1_0.ensure_native_custom_fields

@@ -6,7 +6,8 @@ app_email = "itnaseco@gmail.com"
 app_license = "mit"
 app_logo_url = "/assets/naseco_assets/images/naseco-assets.svg"
 app_home = "/desk/naseco-assets"
-required_apps = ["erpnext"]
+required_apps = ["erpnext", "hrms"]
+after_install = "naseco_assets.naseco_assets.setup.ensure_native_custom_fields"
 after_migrate = "naseco_assets.naseco_assets.patches.v1_0.restore_asset_capitalization._restore_naseco_assets_workspace"
 
 override_whitelisted_methods = {
@@ -110,7 +111,20 @@ fixtures = [
 			]
 		],
 	},
-	"Property Setter",
+	{
+		"dt": "Property Setter",
+		"filters": [["name", "in", [
+			"Asset Category-main-field_order",
+			"Asset Category-naseco_default_depreciation_method-hidden",
+			"Asset Category-naseco_usage_based_reporting-hidden",
+			"Asset Category-naseco_non_depreciable-hidden",
+			"Asset-insurer-in_list_view",
+			"Asset-current_custodian-in_list_view",
+			"Asset-serial_number-in_list_view",
+			"Asset-insurance_start_date-in_list_view",
+			"Asset-insurance_end_date-in_list_view",
+		]]],
+	},
 	"Role",
 	"Workflow",
 	"Workspace",

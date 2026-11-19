@@ -209,4 +209,10 @@ def execute() -> None:
 		],
 	}
 
+	for doctype, fields in custom_fields.items():
+		custom_fields[doctype] = [
+			field for field in fields
+			if not frappe.db.exists("DocField", {"parent": doctype, "fieldname": field["fieldname"]})
+		]
+
 	create_custom_fields(custom_fields, update=True)
