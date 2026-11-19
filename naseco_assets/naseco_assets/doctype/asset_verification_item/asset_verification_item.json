@@ -1,0 +1,92 @@
+{
+ "allow_copy": 0,
+ "creation": "2026-07-08 00:00:00.000000",
+ "custom": 0,
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Asset",
+   "options": "Asset",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expected_location",
+   "fieldtype": "Link",
+   "label": "Expected Location",
+   "options": "Location"
+  },
+  {
+   "fieldname": "actual_location",
+   "fieldtype": "Link",
+   "label": "Actual Location",
+   "options": "Location"
+  },
+  {
+   "fieldname": "expected_custodian",
+   "fieldtype": "Link",
+   "label": "Expected Custodian",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "actual_custodian",
+   "fieldtype": "Link",
+   "label": "Actual Custodian",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "qr_scanned",
+   "fieldtype": "Check",
+   "label": "QR Scanned"
+  },
+  {
+   "fieldname": "gps_latitude",
+   "fieldtype": "Float",
+   "label": "GPS Latitude"
+  },
+  {
+   "fieldname": "gps_longitude",
+   "fieldtype": "Float",
+   "label": "GPS Longitude"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "condition_status",
+   "fieldtype": "Select",
+   "label": "Condition Status",
+   "options": "Good\nFair\nPoor\nDamaged\nMissing"
+  },
+  {
+   "fieldname": "exception_type",
+   "fieldtype": "Select",
+   "label": "Exception Type",
+   "options": "None\nMissing Asset\nWrong Location\nWrong Custodian\nDamaged\nDuplicate Tag\nUnrecorded Asset"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "has_web_view": 0,
+ "hide_heading": 0,
+ "hide_toolbar": 0,
+ "idx": 0,
+ "istable": 1,
+ "module": "NASECO ASSETS",
+ "name": "Asset Verification Item",
+ "permissions": [],
+ "quick_entry": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "hidden": 1
+}

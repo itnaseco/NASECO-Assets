@@ -1,0 +1,26 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "doctype": "Report",
+ "filters": [
+  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company"},
+  {"fieldname": "branch", "fieldtype": "Link", "label": "Branch", "options": "Branch"},
+  {"fieldname": "department", "fieldtype": "Link", "label": "Department", "options": "Department"},
+  {"fieldname": "cost_center", "fieldtype": "Link", "label": "Cost Center", "options": "Cost Center"},
+  {"fieldname": "asset_category", "fieldtype": "Link", "label": "Asset Category", "options": "Asset Category"},
+  {"fieldname": "finance_book", "fieldtype": "Link", "label": "Finance Book", "options": "Finance Book"}
+ ],
+ "is_standard": "Yes",
+ "module": "NASECO ASSETS",
+ "name": "Depreciation Schedule Summary",
+ "ref_doctype": "Asset",
+ "report_name": "Depreciation Schedule Summary",
+ "report_type": "Script Report",
+ "roles": [
+  {"role": "Asset Administrator"},
+  {"role": "Finance Manager"},
+  {"role": "Fixed Asset Accountant"},
+  {"role": "Internal Auditor"},
+  {"role": "Executive Viewer"}
+ ]
+}

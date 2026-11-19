@@ -1,0 +1,62 @@
+{
+ "allow_copy": 0,
+ "creation": "2026-07-08 00:00:00.000000",
+ "custom": 0,
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "allow_on_submit": 1,
+   "in_list_view": 1,
+   "label": "Asset",
+   "options": "Asset",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "fetch_from": "asset.item_code",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "asset_category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Asset Category",
+   "options": "Asset Category",
+   "fetch_from": "asset.asset_category",
+   "read_only": 1
+  },
+  {
+   "fieldname": "insured_value",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "allow_on_submit": 1,
+   "label": "Insured Value"
+  },
+  {
+   "fieldname": "coverage_notes",
+   "fieldtype": "Small Text",
+   "allow_on_submit": 1,
+   "label": "Coverage Notes"
+  }
+ ],
+ "has_web_view": 0,
+ "hide_heading": 0,
+ "hide_toolbar": 0,
+ "idx": 0,
+ "istable": 1,
+ "module": "NASECO ASSETS",
+ "name": "Asset Insurance Policy Item",
+ "permissions": [],
+ "quick_entry": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

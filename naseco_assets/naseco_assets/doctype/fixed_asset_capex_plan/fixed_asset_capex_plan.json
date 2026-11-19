@@ -1,0 +1,148 @@
+{
+ "allow_copy": 0,
+ "allow_import": 0,
+ "allow_rename": 0,
+ "autoname": "format:CAPEX-{YYYY}-{#####}",
+ "creation": "2026-07-08 00:00:00.000000",
+ "custom": 0,
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "budget_utilization_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Budget Usage Status",
+   "options": "No Approved Budget\nNot Utilized\nLow Utilization\nModerate Utilization\nHigh Utilization\nFully Utilized\nOver Budget",
+   "read_only": 1
+  },
+  {
+   "fieldname": "budget_utilization_percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Budget Used (%)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Fiscal Year",
+   "options": "Fiscal Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "asset_category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Asset Category",
+   "options": "Asset Category"
+  },
+  {
+   "fieldname": "approved_budget",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Approved Budget"
+  },
+  {
+   "fieldname": "committed_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Received, Not Billed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "actual_spent",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Billed Spend",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remaining_budget",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Remaining Budget",
+   "read_only": 1
+  },
+  {
+   "fieldname": "forecast_amount",
+   "fieldtype": "Currency",
+   "label": "Forecast Amount"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nPending Review\nReturned for Revision\nApproved\nFrozen\nClosed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "has_web_view": 0,
+ "hide_heading": 0,
+ "hide_toolbar": 0,
+ "idx": 0,
+ "istable": 0,
+ "module": "NASECO ASSETS",
+ "name": "Fixed Asset CAPEX Plan",
+ "permissions": [
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Finance Manager"
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Asset Administrator"
+  },
+  {
+   "read": 1,
+   "role": "Internal Auditor"
+  },
+  {
+   "read": 1,
+   "role": "Executive Viewer"
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

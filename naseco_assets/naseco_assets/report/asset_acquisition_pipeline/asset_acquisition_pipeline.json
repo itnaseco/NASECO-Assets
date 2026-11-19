@@ -1,0 +1,32 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "doctype": "Report",
+ "filters": [
+  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company"},
+  {"fieldname": "fiscal_year", "fieldtype": "Link", "label": "Fiscal Year", "options": "Fiscal Year"},
+  {"fieldname": "branch", "fieldtype": "Link", "label": "Branch", "options": "Branch"},
+  {"fieldname": "department", "fieldtype": "Link", "label": "Department", "options": "Department"},
+  {"fieldname": "cost_center", "fieldtype": "Link", "label": "Cost Center", "options": "Cost Center"},
+  {"fieldname": "asset_category", "fieldtype": "Link", "label": "Asset Category", "options": "Asset Category"},
+  {"fieldname": "custodian", "fieldtype": "Link", "label": "Custodian", "options": "Employee"},
+  {"fieldname": "location", "fieldtype": "Link", "label": "Location", "options": "Location"},
+  {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Draft\nPending Department Approval\nPending Finance Review\nPending Management Approval\nApproved\nRejected\nDeferred"},
+  {"fieldname": "from_date", "fieldtype": "Date", "label": "From Date"},
+  {"fieldname": "to_date", "fieldtype": "Date", "label": "To Date"}
+ ],
+ "is_standard": "Yes",
+ "module": "NASECO ASSETS",
+ "name": "Asset Acquisition Pipeline",
+ "ref_doctype": "Fixed Asset Request",
+ "report_name": "Asset Acquisition Pipeline",
+ "report_type": "Script Report",
+ "roles": [
+  {"role": "Asset Administrator"},
+  {"role": "Finance Manager"},
+  {"role": "Procurement Manager"},
+  {"role": "Department Manager"},
+  {"role": "Internal Auditor"},
+  {"role": "Executive Viewer"}
+ ]
+}

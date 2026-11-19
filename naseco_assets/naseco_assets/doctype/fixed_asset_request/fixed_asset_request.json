@@ -1,0 +1,197 @@
+{
+ "allow_copy": 0,
+ "allow_import": 0,
+ "allow_rename": 0,
+ "autoname": "format:FAR-{YYYY}-{#####}",
+ "creation": "2026-07-08 00:00:00.000000",
+ "custom": 0,
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "request_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Request Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "requesting_employee",
+   "fieldtype": "Link",
+   "label": "Requesting Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Fiscal Year",
+   "options": "Fiscal Year"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "asset_category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Asset Category",
+   "options": "Asset Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "asset_business_class",
+   "fieldtype": "Select",
+   "label": "Asset Business Class",
+   "options": "Agricultural Equipment\nProcessing Equipment\nLaboratory Equipment\nFleet\nIT Equipment\nBuildings\nFurniture & Fixtures\nUtilities\nConstruction in Progress\nIntangible Fixed Asset"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "label": "Quantity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "estimated_unit_cost",
+   "fieldtype": "Currency",
+   "label": "Estimated Unit Cost",
+   "reqd": 1
+  },
+  {
+   "fieldname": "estimated_total_cost",
+   "fieldtype": "Currency",
+   "label": "Estimated Total Cost",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "required_date",
+   "fieldtype": "Date",
+   "label": "Required Date"
+  },
+  {
+   "fieldname": "business_justification",
+   "fieldtype": "Text Editor",
+   "label": "Business Justification"
+  },
+  {
+   "fieldname": "capex_plan",
+   "fieldtype": "Link",
+   "label": "CAPEX Plan",
+   "options": "Fixed Asset CAPEX Plan"
+  },
+  {
+   "fieldname": "budget_available",
+   "fieldtype": "Check",
+   "label": "Budget Available"
+  },
+  {
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Approval Status",
+   "options": "Draft\nPending Department Approval\nPending Finance Review\nPending Management Approval\nApproved\nRejected\nDeferred",
+   "reqd": 1
+  },
+  {
+   "fieldname": "linked_material_request",
+   "fieldtype": "Link",
+   "label": "Linked Material Request",
+   "options": "Material Request",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "linked_purchase_order",
+   "fieldtype": "Link",
+   "label": "Linked Purchase Order",
+   "options": "Purchase Order",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "linked_asset",
+   "fieldtype": "Link",
+   "label": "Linked Asset",
+   "options": "Asset",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments"
+  }
+ ],
+ "has_web_view": 0,
+ "hide_heading": 0,
+ "hide_toolbar": 0,
+ "idx": 0,
+ "is_submittable": 1,
+ "istable": 0,
+ "module": "NASECO ASSETS",
+ "name": "Fixed Asset Request",
+ "permissions": [
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "submit": 1,
+   "cancel": 0,
+   "delete": 0,
+   "role": "Department Manager"
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "submit": 1,
+   "cancel": 0,
+   "delete": 0,
+   "role": "Finance Manager"
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "submit": 1,
+   "cancel": 0,
+   "delete": 0,
+   "role": "Asset Administrator"
+  },
+  {
+   "read": 1,
+   "role": "Internal Auditor"
+  },
+  {
+   "read": 1,
+   "role": "Executive Viewer"
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

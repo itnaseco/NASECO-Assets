@@ -1,0 +1,112 @@
+{
+ "allow_copy": 0,
+ "allow_import": 0,
+ "allow_rename": 0,
+ "autoname": "format:CLAIM-{YYYY}-{#####}",
+ "creation": "2026-07-08 00:00:00.000000",
+ "custom": 0,
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "insurance_policy",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Insurance Policy",
+   "options": "Asset Insurance Policy",
+   "reqd": 1
+  },
+  {
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Asset",
+   "options": "Asset",
+   "reqd": 1
+  },
+  {
+   "fieldname": "claim_date",
+   "fieldtype": "Date",
+   "label": "Claim Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "incident_date",
+   "fieldtype": "Date",
+   "label": "Incident Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "incident_description",
+   "fieldtype": "Text",
+   "label": "Incident Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "estimated_loss",
+   "fieldtype": "Currency",
+   "label": "Estimated Loss"
+  },
+  {
+   "fieldname": "claimed_amount",
+   "fieldtype": "Currency",
+   "label": "Claimed Amount"
+  },
+  {
+   "fieldname": "settled_amount",
+   "fieldtype": "Currency",
+   "label": "Settled Amount"
+  },
+  {
+   "fieldname": "claim_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Claim Status",
+   "options": "Draft\nSubmitted\nUnder Review\nApproved\nRejected\nSettled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "claim_documents",
+   "fieldtype": "Attach",
+   "label": "Claim Documents"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  }
+ ],
+ "has_web_view": 0,
+ "hide_heading": 0,
+ "hide_toolbar": 0,
+ "idx": 0,
+ "is_submittable": 1,
+ "istable": 0,
+ "module": "NASECO ASSETS",
+ "name": "Asset Insurance Claim",
+ "permissions": [
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "submit": 1,
+   "role": "Asset Administrator"
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "submit": 1,
+   "role": "Finance Manager"
+  },
+  {
+   "read": 1,
+   "role": "Internal Auditor"
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

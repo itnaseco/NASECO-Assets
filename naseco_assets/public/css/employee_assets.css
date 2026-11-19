@@ -1,0 +1,125 @@
+.form-grid-container.naseco-employee-asset-table-container {
+	box-sizing: border-box;
+	position: static;
+	overflow-x: auto;
+}
+
+.form-grid.naseco-employee-asset-table-wrap {
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 0;
+	overflow: visible;
+}
+
+.naseco-employee-asset-table {
+	width: 100%;
+	min-width: max-content;
+	margin: 0;
+	border-collapse: separate;
+	border-spacing: 0;
+	color: var(--text-muted);
+	font-family: var(--font-stack);
+	font-size: var(--text-sm);
+	font-weight: var(--font-weight-regular);
+	letter-spacing: 0.02em;
+}
+
+.naseco-employee-asset-table th,
+.naseco-employee-asset-table td {
+	padding: var(--grid-padding, 6px 8px);
+	vertical-align: middle;
+	white-space: nowrap;
+	border-right: 1px solid var(--table-border-color);
+}
+
+.naseco-employee-asset-table :is(th, td) :is(a, span, button) {
+	white-space: nowrap;
+}
+
+.naseco-employee-asset-table th:last-child,
+.naseco-employee-asset-table td:last-child {
+	border-right: 0;
+	padding-right: 8px;
+}
+
+.naseco-employee-asset-table thead th {
+	background: var(--subtle-fg);
+	height: 32px;
+	padding: 6px 8px;
+	font-weight: var(--font-weight-regular);
+	border-bottom: 1px solid var(--table-border-color);
+}
+
+.naseco-employee-asset-table thead th:first-child {
+	border-top-left-radius: var(--radius-md);
+}
+
+.naseco-employee-asset-table thead th:last-child {
+	border-top-right-radius: var(--radius-md);
+}
+
+.naseco-employee-asset-table tbody td {
+	background: var(--fg-color);
+}
+
+.naseco-employee-asset-table tbody tr:hover td {
+	background: var(--subtle-fg);
+}
+
+.naseco-employee-asset-table tbody td {
+	height: 43px;
+	border-bottom: 1px solid var(--table-border-color);
+}
+
+.naseco-employee-asset-table tbody tr:last-child td {
+	border-bottom: 0;
+}
+
+.naseco-employee-asset-table tbody tr:last-child td:first-child {
+	border-bottom-left-radius: var(--radius-md);
+}
+
+.naseco-employee-asset-table tbody tr:last-child td:last-child {
+	border-bottom-right-radius: var(--radius-md);
+}
+
+.naseco-employee-asset-table th:first-child {
+	width: 26%;
+}
+
+.naseco-employee-asset-table .naseco-employee-asset-action-heading {
+	width: 150px;
+	text-align: center;
+}
+
+.naseco-employee-asset-table .naseco-employee-asset-action-cell {
+	text-align: center;
+}
+
+.naseco-employee-asset-identity {
+	display: block;
+	max-width: 220px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-weight: var(--font-weight-semibold);
+}
+
+.naseco-employee-asset-identity a {
+	color: var(--text-color);
+	font-weight: var(--font-weight-semibold);
+}
+
+.naseco-employee-asset-actions {
+	display: flex;
+	justify-content: center;
+}
+
+.naseco-employee-asset-actions .dropdown-menu {
+	min-width: 150px;
+}
+
+.naseco-employee-asset-actions .dropdown-item {
+	width: 100%;
+	text-align: left;
+}
+

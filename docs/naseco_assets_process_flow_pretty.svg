@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1281.3251309523807 2692.965000000001" width="1281.3251309523807" height="2692.965000000001" style="--bg:#FFFFFF;--fg:#27272A;background:var(--bg)">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<polyline class="edge" data-from="START" data-to="PLAN" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1130.4022976190474,76.9 1130.4022976190477,140.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="PLAN" data-to="PLAN_APPROVAL" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1130.4022976190474,177.8 1130.4022976190474,209.8 1047.6689642857143,209.8 1047.6689642857143,241.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="PLAN_APPROVAL" data-to="REVISE" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="No" points="1085.089630952381,428.9033333333333 1085.0896309523807,2024.6650000000004" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="PLAN_APPROVAL" data-to="REQUEST" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Yes" points="1010.2482976190475,428.90333333333325 1010.2482976190475,478.32399999999996 733.2534999999999,478.32399999999996 733.2534999999999,562.624 718.6626666666666,562.624 718.6626666666666,574.624" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="REQUEST" data-to="REQUEST_APPROVAL" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="684.3774999999999,611.524 684.3774999999999,675.524" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="REQUEST_APPROVAL" data-to="MR" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="684.3774999999999,712.424 684.3774999999998,776.424" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="MR" data-to="PO" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="684.3774999999998,813.324 684.3774999999999,877.324" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="PO" data-to="PR" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="684.3774999999999,914.2239999999999 684.3774999999999,978.2239999999999" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="PR" data-to="PI" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="684.3774999999999,1015.1239999999999 684.3774999999999,1079.1239999999998" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="PI" data-to="ROUTE" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="684.3774999999999,1116.024 684.3774999999999,1180.024" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="ROUTE" data-to="PURCHASED" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Standard purchase" points="654.7373333333333,1328.2248333333332 654.7373333333333,1494.165 507.275,1494.165 507.275,1607.065" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="PURCHASED" data-to="ASSET" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="507.275,1643.9650000000001 507.275,1675.9650000000001 684.3774999999999,1675.9650000000001 684.3774999999999,1707.9650000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="ROUTE" data-to="CIP" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Project or construction" points="714.0176666666665,1328.2248333333332 714.0176666666665,1409.865 728.6084999999999,1409.865 728.6084999999999,1506.165" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CIP" data-to="CIP_APPROVAL" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="728.6084999999999,1543.065 728.6084999999999,1607.065" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CIP_APPROVAL" data-to="ASSET" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="728.6084999999999,1643.9650000000001 728.6084999999999,1675.9650000000001 684.3774999999999,1675.9650000000001 684.3774999999999,1707.9650000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="ASSET" data-to="AVAILABLE" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="684.3774999999999,1744.8650000000002 684.3774999999999,1808.8650000000002" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="AVAILABLE" data-to="CAPITALIZED" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="684.3774999999999,1845.7650000000003 684.3774999999998,1909.7650000000003" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CAPITALIZED" data-to="MOVEMENT" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="684.3774999999998,1946.6650000000004 684.3774999999998,1985.6650000000004 636.3426666666666,1985.6650000000004 636.3426666666666,2024.6650000000004" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="MOVEMENT" data-to="CUSTODY" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="636.3426666666666,2061.5650000000005 636.3426666666666,2111.5650000000005" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CUSTODY" data-to="EMPLOYEE" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="636.3426666666666,2148.4650000000006 636.3426666666666,2180.4650000000006 842.693,2180.4650000000006 842.693,2426.265000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CAPITALIZED" data-to="INSURANCE" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="684.3774999999998,1946.6650000000004 684.3774999999998,1985.6650000000004 245.337,1985.6650000000004 245.337,2527.165000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CAPITALIZED" data-to="MAINTENANCE" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="684.3774999999998,1946.6650000000004 684.3774999999998,1985.6650000000004 1000.0084999999999,1985.6650000000004 1000.0084999999999,2527.165000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CAPITALIZED" data-to="USAGE" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="684.3774999999998,1946.6650000000004 684.3774999999998,1985.6650000000004 137.6685,1985.6650000000004 137.6685,2426.265000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CUSTODY" data-to="VERIFY" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="636.3426666666666,2148.4650000000006 636.3426666666666,2180.4650000000006 511.1305,2180.4650000000006 511.1305,2212.4650000000006" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="VERIFY" data-to="FIELD_CHECK" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="511.1305,2249.3650000000007 511.1304999999999,2313.3650000000007" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="FIELD_CHECK" data-to="AUDIT" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="511.1304999999999,2350.265000000001 511.1304999999999,2426.265000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="AUDIT" data-to="SYNC" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="511.1304999999999,2463.165000000001 511.1304999999999,2527.165000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CONTROLS" data-to="REQUEST" data-style="dotted" data-arrow-start="false" data-arrow-end="true" data-label="governs lifecycle" points="648.6134999999999,426.32399999999996 648.6134999999999,562.624 650.0923333333333,562.624 650.0923333333333,574.624" fill="none" stroke="var(--_line)" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="INSURANCE" data-to="ALERTS" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="245.337,2564.065000000001 245.337,2589.065000000001 503.40029761904754,2589.065000000001 503.40029761904754,2614.065000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="MAINTENANCE" data-to="ALERTS" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1000.0084999999999,2564.065000000001 1000.0084999999999,2589.065000000001 503.40029761904754,2589.065000000001 503.40029761904754,2614.065000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="SYNC" data-to="ALERTS" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="511.13049999999987,2564.065000000001 511.13049999999987,2589.065000000001 503.40029761904754,2589.065000000001 503.40029761904754,2614.065000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="PLAN" data-to="REPORTS" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1130.4022976190474,177.8 1130.4022976190474,209.8 854.1295714285714,209.8 854.1295714285714,2614.065000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CAPITALIZED" data-to="REPORTS" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="684.3774999999998,1946.6650000000004 684.3774999999998,1985.6650000000004 854.1295714285714,1985.6650000000004 854.1295714285714,2614.065000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CUSTODY" data-to="REPORTS" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="636.3426666666666,2148.4650000000006 636.3426666666666,2180.4650000000006 854.1295714285714,2180.4650000000006 854.1295714285714,2614.065000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="INSURANCE" data-to="REPORTS" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="245.337,2564.065000000001 245.337,2589.065000000001 854.1295714285714,2589.065000000001 854.1295714285714,2614.065000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="MAINTENANCE" data-to="REPORTS" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="1000.0084999999999,2564.065000000001 1000.0084999999999,2589.065000000001 854.1295714285714,2589.065000000001 854.1295714285714,2614.065000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="SYNC" data-to="REPORTS" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="511.13049999999987,2564.065000000001 511.13049999999987,2589.065000000001 854.1295714285714,2589.065000000001 854.1295714285714,2614.065000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<g class="edge-label" data-from="PLAN_APPROVAL" data-to="REVISE" data-label="No">
+  <rect x="1069.589630952381" y="1949.3650000000005" width="30.718000000000004" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="1084.9486309523809" y="1964.5150000000006" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">No</text>
+</g>
+<g class="edge-label" data-from="PLAN_APPROVAL" data-to="REQUEST" data-label="Yes">
+  <rect x="714.7534999999999" y="485.32399999999996" width="36.658" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="733.0824999999999" y="500.47399999999993" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Yes</text>
+</g>
+<g class="edge-label" data-from="ROUTE" data-to="PURCHASED" data-label="Standard purchase">
+  <rect x="452.275" y="1517.765" width="109.72000000000001" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="507.135" y="1532.9150000000002" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Standard purchase</text>
+</g>
+<g class="edge-label" data-from="ROUTE" data-to="CIP" data-label="Project or construction">
+  <rect x="665.6084999999999" y="1416.865" width="125.75800000000004" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="728.4875" y="1432.015" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Project or construction</text>
+</g>
+<g class="edge-label" data-from="CONTROLS" data-to="REQUEST" data-label="governs lifecycle">
+  <rect x="598.6134999999999" y="485.32399999999996" width="99.02800000000002" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="648.1274999999999" y="500.47399999999993" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">governs lifecycle</text>
+</g>
+<g class="node" data-id="START" data-label="Asset need identified" data-shape="stadium">
+  <rect x="1049.4062976190476" y="40" width="161.99200000000002" height="36.900000000000006" rx="18.450000000000003" ry="18.450000000000003" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1130.4022976190477" y="58.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Asset need identified</text>
+</g>
+<g class="node" data-id="PLAN" data-label="Create CAPEX Plan" data-shape="rectangle">
+  <rect x="1051.6292976190475" y="140.9" width="157.546" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1130.4022976190474" y="159.35000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Create CAPEX Plan</text>
+</g>
+<g class="node" data-id="PLAN_APPROVAL" data-label="Finance approves budget?" data-shape="diamond">
+  <polygon points="1047.6689642857143,241.8 1159.9309642857143,354.062 1047.6689642857143,466.324 935.4069642857144,354.062" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1047.6689642857143" y="354.062" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Finance approves budget?</text>
+</g>
+<g class="node" data-id="REVISE" data-label="Revise and resubmit CAPEX Plan" data-shape="rectangle">
+  <rect x="967.0436309523808" y="2024.6650000000004" width="236.09199999999996" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1085.0896309523807" y="2043.1150000000005" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Revise and resubmit CAPEX Plan</text>
+</g>
+<g class="node" data-id="REQUEST" data-label="Create Fixed Asset Request" data-shape="rectangle">
+  <rect x="581.5219999999999" y="574.624" width="205.71099999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="684.3774999999999" y="593.0740000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Create Fixed Asset Request</text>
+</g>
+<g class="node" data-id="REQUEST_APPROVAL" data-label="Department, Finance and Management approval" data-shape="rectangle">
+  <rect x="524.4649999999999" y="675.524" width="319.825" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="684.3774999999999" y="693.974" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Department, Finance and Management approval</text>
+</g>
+<g class="node" data-id="MR" data-label="Material Request" data-shape="rectangle">
+  <rect x="613.7554999999999" y="776.424" width="141.244" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="684.3774999999998" y="794.874" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Material Request</text>
+</g>
+<g class="node" data-id="PO" data-label="Purchase Order" data-shape="rectangle">
+  <rect x="614.867" y="877.324" width="139.02100000000002" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="684.3774999999999" y="895.774" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Purchase Order</text>
+</g>
+<g class="node" data-id="PR" data-label="Purchase Receipt" data-shape="rectangle">
+  <rect x="610.4209999999999" y="978.2239999999999" width="147.913" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="684.3774999999999" y="996.674" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Purchase Receipt</text>
+</g>
+<g class="node" data-id="PI" data-label="Purchase Invoice" data-shape="rectangle">
+  <rect x="611.1619999999999" y="1079.1239999999998" width="146.43099999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="684.3774999999999" y="1097.5739999999998" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Purchase Invoice</text>
+</g>
+<g class="node" data-id="ROUTE" data-label="Capitalization route" data-shape="diamond">
+  <polygon points="684.3774999999998,1180.024 773.2979999999998,1268.9444999999998 684.3774999999998,1357.8649999999998 595.4569999999999,1268.9444999999998" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="684.3774999999998" y="1268.9444999999998" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Capitalization route</text>
+</g>
+<g class="node" data-id="PURCHASED" data-label="Purchased Asset" data-shape="rectangle">
+  <rect x="434.80049999999994" y="1607.065" width="144.949" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="507.275" y="1625.515" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Purchased Asset</text>
+</g>
+<g class="node" data-id="CIP" data-label="CIP Capitalization Request" data-shape="rectangle">
+  <rect x="631.3105" y="1506.165" width="194.59599999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="728.6085" y="1524.615" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">CIP Capitalization Request</text>
+</g>
+<g class="node" data-id="CIP_APPROVAL" data-label="Finance capitalization approval" data-shape="rectangle">
+  <rect x="615.7494999999999" y="1607.065" width="225.718" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="728.6084999999999" y="1625.515" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Finance capitalization approval</text>
+</g>
+<g class="node" data-id="ASSET" data-label="Create or update ERPNext Asset" data-shape="rectangle">
+  <rect x="568.5545" y="1707.9650000000001" width="231.64599999999996" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="684.3774999999999" y="1726.4150000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Create or update ERPNext Asset</text>
+</g>
+<g class="node" data-id="AVAILABLE" data-label="Set available-for-use date" data-shape="rectangle">
+  <rect x="589.3024999999999" y="1808.8650000000002" width="190.15" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="684.3774999999999" y="1827.3150000000003" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Set available-for-use date</text>
+</g>
+<g class="node" data-id="CAPITALIZED" data-label="Submit and capitalize Asset" data-shape="stadium">
+  <rect x="584.4859999999999" y="1909.7650000000003" width="199.783" height="36.900000000000006" rx="18.450000000000003" ry="18.450000000000003" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="684.3774999999998" y="1928.2150000000004" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Submit and capitalize Asset</text>
+</g>
+<g class="node" data-id="MOVEMENT" data-label="Asset Movement" data-shape="rectangle">
+  <rect x="567.2026666666666" y="2024.6650000000004" width="138.28" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="636.3426666666666" y="2043.1150000000005" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Asset Movement</text>
+</g>
+<g class="node" data-id="CUSTODY" data-label="Update location and employee custody" data-shape="rectangle">
+  <rect x="504.21766666666656" y="2111.5650000000005" width="264.25" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="636.3426666666666" y="2130.0150000000003" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Update location and employee custody</text>
+</g>
+<g class="node" data-id="EMPLOYEE" data-label="Show assigned assets on Employee record" data-shape="rectangle">
+  <rect x="695.3774999999999" y="2426.265000000001" width="294.631" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="842.693" y="2444.7150000000006" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Show assigned assets on Employee record</text>
+</g>
+<g class="node" data-id="INSURANCE" data-label="Insurance policy and claims" data-shape="rectangle">
+  <rect x="143.2225" y="2527.165000000001" width="204.22899999999996" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="245.337" y="2545.6150000000007" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Insurance policy and claims</text>
+</g>
+<g class="node" data-id="MAINTENANCE" data-label="Maintenance plans and checklists" data-shape="rectangle">
+  <rect x="879.7394999999999" y="2527.165000000001" width="240.53799999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="1000.0084999999999" y="2545.6150000000007" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Maintenance plans and checklists</text>
+</g>
+<g class="node" data-id="USAGE" data-label="Usage and meter readings" data-shape="rectangle">
+  <rect x="40" y="2426.265000000001" width="195.337" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="137.6685" y="2444.7150000000006" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Usage and meter readings</text>
+</g>
+<g class="node" data-id="VERIFY" data-label="Verification Batch" data-shape="rectangle">
+  <rect x="438.65599999999995" y="2212.4650000000006" width="144.949" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="511.1305" y="2230.9150000000004" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Verification Batch</text>
+</g>
+<g class="node" data-id="FIELD_CHECK" data-label="Check location, custodian, condition, QR and GPS" data-shape="rectangle">
+  <rect x="347.8834999999999" y="2313.3650000000007" width="326.49399999999997" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="511.13049999999987" y="2331.8150000000005" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Check location, custodian, condition, QR and GPS</text>
+</g>
+<g class="node" data-id="AUDIT" data-label="Internal audit review" data-shape="rectangle">
+  <rect x="431.6164999999999" y="2426.265000000001" width="159.02800000000002" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="511.1304999999999" y="2444.7150000000006" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Internal audit review</text>
+</g>
+<g class="node" data-id="SYNC" data-label="Update Asset and record exceptions" data-shape="rectangle">
+  <rect x="383.4514999999999" y="2527.165000000001" width="255.35799999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="511.13049999999987" y="2545.6150000000007" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Update Asset and record exceptions</text>
+</g>
+<g class="node" data-id="CONTROLS" data-label="Budget, depreciation and role controls" data-shape="rectangle">
+  <rect x="516.4884999999999" y="389.424" width="264.25" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="648.6134999999999" y="407.87399999999997" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Budget, depreciation and role controls</text>
+</g>
+<g class="node" data-id="ALERTS" data-label="Daily alerts and exception notifications" data-shape="rectangle">
+  <rect x="371.2752976190476" y="2614.065000000001" width="264.2499999999999" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="503.40029761904754" y="2632.515000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Daily alerts and exception notifications</text>
+</g>
+<g class="node" data-id="REPORTS" data-label="Registers, dashboards and management reports" data-shape="stadium">
+  <rect x="692.3645714285714" y="2614.065000000001" width="323.5299999999999" height="36.900000000000006" rx="18.450000000000003" ry="18.450000000000003" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="854.1295714285714" y="2632.515000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Registers, dashboards and management reports</text>
+</g>
+</svg>

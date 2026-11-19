@@ -1,0 +1,25 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "doctype": "Report",
+ "filters": [
+  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company"},
+  {"fieldname": "branch", "fieldtype": "Link", "label": "Branch", "options": "Branch"},
+  {"fieldname": "department", "fieldtype": "Link", "label": "Department", "options": "Department"},
+  {"fieldname": "asset_category", "fieldtype": "Link", "label": "Asset Category", "options": "Asset Category"},
+  {"fieldname": "location", "fieldtype": "Link", "label": "Location", "options": "Location"},
+  {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Draft\nSubmitted\nPartially Depreciated\nFully Depreciated\nSold\nScrapped\nIn Maintenance\nOut of Order\nIssue\nReceipt\nCapitalized\nWork In Progress"}
+ ],
+ "is_standard": "Yes",
+ "module": "NASECO ASSETS",
+ "name": "Assets Without Custodian Report",
+ "ref_doctype": "Asset",
+ "report_name": "Assets Without Custodian Report",
+ "report_type": "Script Report",
+ "roles": [
+  {"role": "Asset Administrator"},
+  {"role": "Finance Manager"},
+  {"role": "Internal Auditor"},
+  {"role": "Executive Viewer"}
+ ]
+}

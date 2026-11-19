@@ -4,28 +4,141 @@ app_publisher = "Matovu Matthew"
 app_description = "An extension to the Frappe Assets App to manage NASECO Assets"
 app_email = "itnaseco@gmail.com"
 app_license = "mit"
+app_logo_url = "/assets/naseco_assets/images/naseco-assets.svg"
+app_home = "/desk/naseco-assets"
+required_apps = ["erpnext"]
+after_migrate = "naseco_assets.naseco_assets.patches.v1_0.restore_asset_capitalization._restore_naseco_assets_workspace"
+
+override_whitelisted_methods = {
+	"erpnext.assets.doctype.asset.asset.make_sales_invoice": "naseco_assets.naseco_assets.api.make_sales_invoice_for_asset_sale",
+	"erpnext.assets.doctype.asset.asset.get_item_details": "naseco_assets.naseco_assets.residual_value.get_item_details",
+}
+
+doctype_js = {
+	"Asset": ["public/js/asset.js", "public/js/fully_depreciated_opening.js"],
+	"Employee": "public/js/employee.js",
+	"Asset Insurance Policy": "public/js/asset_insurance_policy.js",
+	"Fixed Asset Request": "public/js/fixed_asset_request.js",
+	"Fixed Asset CAPEX Plan": "public/js/fixed_asset_capex_plan.js",
+}
+
+doctype_list_js = {
+	"Asset": "public/js/fixed_asset_management.js",
+	"Fixed Asset Request": "public/js/fixed_asset_management.js",
+	"Fixed Asset CAPEX Plan": "public/js/fixed_asset_management.js",
+	"Asset Insurance Policy": "public/js/fixed_asset_management.js",
+	"Asset Maintenance Plan": "public/js/fixed_asset_management.js",
+	"CIP Capitalization Request": "public/js/fixed_asset_management.js",
+}
+
+scheduler_events = {
+	"daily": [
+		"naseco_assets.naseco_assets.notifications.run_daily_asset_alerts",
+	],
+}
+
+doc_events = {
+	"Asset": {
+		"before_validate": "naseco_assets.naseco_assets.asset_hooks.before_validate_asset",
+		"validate": "naseco_assets.naseco_assets.asset_hooks.validate_asset",
+		"on_update": "naseco_assets.naseco_assets.asset_hooks.on_update_asset",
+		"before_submit": "naseco_assets.naseco_assets.asset_hooks.before_submit_asset",
+		"on_submit": "naseco_assets.naseco_assets.asset_hooks.on_submit_asset",
+		"on_cancel": "naseco_assets.naseco_assets.asset_hooks.on_cancel_asset",
+		"on_update_after_submit": "naseco_assets.naseco_assets.asset_hooks.on_update_after_submit_asset",
+	},
+	"Asset Category": {
+		"before_validate": "naseco_assets.naseco_assets.residual_value.before_validate_asset_category",
+	},
+	"Asset Movement": {
+		"on_submit": "naseco_assets.naseco_assets.asset_hooks.on_submit_asset_movement",
+		"on_cancel": "naseco_assets.naseco_assets.asset_hooks.on_cancel_asset_movement",
+		"on_update_after_submit": "naseco_assets.naseco_assets.asset_hooks.on_update_after_submit_asset_movement",
+	},
+	"Material Request": {
+		"validate": "naseco_assets.naseco_assets.asset_hooks.validate_material_request",
+		"on_submit": "naseco_assets.naseco_assets.asset_hooks.on_submit_material_request",
+		"on_cancel": "naseco_assets.naseco_assets.asset_hooks.on_cancel_material_request",
+		"on_update_after_submit": "naseco_assets.naseco_assets.asset_hooks.on_update_after_submit_material_request",
+	},
+	"Purchase Order": {
+		"validate": "naseco_assets.naseco_assets.asset_hooks.validate_purchase_order",
+		"on_submit": "naseco_assets.naseco_assets.asset_hooks.on_submit_purchase_order",
+		"on_cancel": "naseco_assets.naseco_assets.asset_hooks.on_cancel_purchase_order",
+		"on_update_after_submit": "naseco_assets.naseco_assets.asset_hooks.on_update_after_submit_purchase_order",
+	},
+	"Purchase Receipt": {
+		"validate": "naseco_assets.naseco_assets.asset_hooks.validate_purchase_receipt",
+		"on_submit": "naseco_assets.naseco_assets.asset_hooks.on_submit_purchase_receipt",
+		"on_cancel": "naseco_assets.naseco_assets.asset_hooks.on_cancel_purchase_receipt",
+		"on_update_after_submit": "naseco_assets.naseco_assets.asset_hooks.on_update_after_submit_purchase_receipt",
+	},
+	"Purchase Invoice": {
+		"validate": "naseco_assets.naseco_assets.asset_hooks.validate_purchase_invoice",
+		"on_submit": "naseco_assets.naseco_assets.asset_hooks.on_submit_purchase_invoice",
+		"on_cancel": "naseco_assets.naseco_assets.asset_hooks.on_cancel_purchase_invoice",
+		"on_update_after_submit": "naseco_assets.naseco_assets.asset_hooks.on_update_after_submit_purchase_invoice",
+	},
+	"Journal Entry": {
+		"before_submit": "naseco_assets.naseco_assets.hr_asset_actions.validate_hr_scrap_before_submit",
+	},
+}
+
+fixtures = [
+	{
+		"dt": "Custom Field",
+		"filters": [
+			[
+				"name",
+				"in",
+				[
+					"Employee-naseco_asset_custody_tab",
+					"Employee-naseco_custodied_assets_html",
+					"Employee-naseco_asset_sale_customer",
+					"Sales Invoice-naseco_asset_sale_employee",
+					"Sales Invoice Item-naseco_asset_net_book_value",
+					"Sales Invoice-naseco_hr_asset",
+					"Sales Invoice-naseco_hr_employee",
+					"Sales Invoice-naseco_hr_reason",
+					"Journal Entry-naseco_hr_asset",
+					"Journal Entry-naseco_hr_employee",
+					"Journal Entry-naseco_hr_reason",
+					"Asset Movement-naseco_hr_asset",
+					"Asset Movement-naseco_hr_employee",
+					"Asset Movement-naseco_hr_reason",
+				],
+			]
+		],
+	},
+	"Property Setter",
+	"Role",
+	"Workflow",
+	"Workspace",
+	"Report",
+	"Dashboard Chart",
+	"Number Card",
+]
 
 # Apps
 # ------------------
 
 # required_apps = []
 
-# Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "naseco_assets",
-# 		"logo": "/assets/naseco_assets/logo.png",
-# 		"title": "NASECO ASSETS",
-# 		"route": "/naseco_assets",
-# 		"has_permission": "naseco_assets.api.permission.has_app_permission"
-# 	}
-# ]
+# Each item in the list will be shown as an app in the apps page.
+add_to_apps_screen = [
+	{
+		"name": app_name,
+		"logo": app_logo_url,
+		"title": app_title,
+		"route": app_home,
+		"sequence_id": 11,
+	}
+]
 
 # Includes in <head>
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/naseco_assets/css/naseco_assets.css"
 # app_include_js = "/assets/naseco_assets/js/naseco_assets.js"
 
 # include js, css files in header of web template
@@ -241,4 +354,3 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-

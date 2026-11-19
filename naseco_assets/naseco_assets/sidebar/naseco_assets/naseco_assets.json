@@ -1,0 +1,365 @@
+{
+ "app": "naseco_assets",
+ "doctype": "Sidebar",
+ "header_icon": "asset-hand-duotone",
+ "items": [
+  {
+   "type": "Link",
+   "label": "Overview",
+   "link_type": "Workspace",
+   "link_to": "NASECO ASSETS",
+   "icon": "house"
+  },
+  {
+   "type": "Link",
+   "label": "Asset Dashboard",
+   "link_type": "Dashboard",
+   "link_to": "Asset",
+   "icon": "chart-column"
+  },
+  {
+   "type": "Section Break",
+   "label": "Planning & Budget",
+   "icon": "clipboard-list",
+   "indent": 1,
+   "collapsible": 1
+  },
+  {
+   "type": "Link",
+   "label": "Fixed Asset Request",
+   "link_type": "DocType",
+   "link_to": "Fixed Asset Request",
+   "icon": "file-plus",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "CAPEX Plan",
+   "link_type": "DocType",
+   "link_to": "Fixed Asset CAPEX Plan",
+   "icon": "calculator",
+   "child": 1
+  },
+  {
+   "type": "Section Break",
+   "label": "Procurement",
+   "icon": "shopping-cart",
+   "indent": 1,
+   "collapsible": 1
+  },
+  {
+   "type": "Link",
+   "label": "Item",
+   "link_type": "DocType",
+   "link_to": "Item",
+   "icon": "package",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Supplier",
+   "link_type": "DocType",
+   "link_to": "Supplier",
+   "icon": "contact",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Material Request",
+   "link_type": "DocType",
+   "link_to": "Material Request",
+   "icon": "clipboard-list",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Request for Quotation",
+   "link_type": "DocType",
+   "link_to": "Request for Quotation",
+   "icon": "file-question",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Supplier Quotation",
+   "link_type": "DocType",
+   "link_to": "Supplier Quotation",
+   "icon": "file-text",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Purchase Order",
+   "link_type": "DocType",
+   "link_to": "Purchase Order",
+   "icon": "shopping-bag",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Purchase Receipt",
+   "link_type": "DocType",
+   "link_to": "Purchase Receipt",
+   "icon": "package-check",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Purchase Invoice",
+   "link_type": "DocType",
+   "link_to": "Purchase Invoice",
+   "icon": "receipt-text",
+   "child": 1
+  },
+  {
+   "type": "Section Break",
+   "label": "Asset Register & Custody",
+   "icon": "building",
+   "indent": 1,
+   "collapsible": 1
+  },
+  {
+   "type": "Link",
+   "label": "Asset",
+   "link_type": "DocType",
+   "link_to": "Asset",
+   "icon": "building",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Asset Category",
+   "link_type": "DocType",
+   "link_to": "Asset Category",
+   "icon": "folder-tree",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Asset Movement",
+   "link_type": "DocType",
+   "link_to": "Asset Movement",
+   "icon": "move",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Employee",
+   "link_type": "DocType",
+   "link_to": "Employee",
+   "icon": "users",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Location",
+   "link_type": "DocType",
+   "link_to": "Location",
+   "icon": "map-pin",
+   "child": 1
+  },
+  {
+   "type": "Section Break",
+   "label": "Depreciation & Disposal",
+   "icon": "trending-down",
+   "indent": 1,
+   "collapsible": 1
+  },
+  {
+   "type": "Link",
+   "label": "Depreciation Schedule",
+   "link_type": "DocType",
+   "link_to": "Asset Depreciation Schedule",
+   "icon": "calendar-days",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Asset Value Adjustment",
+   "link_type": "DocType",
+   "link_to": "Asset Value Adjustment",
+   "icon": "sliders-horizontal",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Depreciation Schedule Summary",
+   "link_type": "Report",
+   "link_to": "Depreciation Schedule Summary",
+   "icon": "table",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Sales Invoice",
+   "link_type": "DocType",
+   "link_to": "Sales Invoice",
+   "icon": "receipt-text",
+   "child": 1
+  },
+  {
+   "type": "Section Break",
+   "label": "Maintenance & Usage",
+   "icon": "wrench",
+   "indent": 1,
+   "collapsible": 1,
+   "keep_closed": 1
+  },
+  {
+   "type": "Link",
+   "label": "Asset Maintenance Plan",
+   "link_type": "DocType",
+   "link_to": "Asset Maintenance Plan",
+   "icon": "calendar-check",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Asset Maintenance",
+   "link_type": "DocType",
+   "link_to": "Asset Maintenance",
+   "icon": "wrench",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Asset Maintenance Log",
+   "link_type": "DocType",
+   "link_to": "Asset Maintenance Log",
+   "icon": "notebook-tabs",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Asset Repair",
+   "link_type": "DocType",
+   "link_to": "Asset Repair",
+   "icon": "hammer",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Asset Usage Reading",
+   "link_type": "DocType",
+   "link_to": "Asset Usage Reading",
+   "icon": "gauge",
+   "child": 1
+  },
+  {
+   "type": "Section Break",
+   "label": "Insurance",
+   "icon": "shield-check",
+   "indent": 1,
+   "collapsible": 1,
+   "keep_closed": 1
+  },
+  {
+   "type": "Link",
+   "label": "Asset Insurance Policy",
+   "link_type": "DocType",
+   "link_to": "Asset Insurance Policy",
+   "icon": "shield",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Asset Insurance Claim",
+   "link_type": "DocType",
+   "link_to": "Asset Insurance Claim",
+   "icon": "file-warning",
+   "child": 1
+  },
+  {
+   "type": "Section Break",
+   "label": "Reports & Analytics",
+   "icon": "chart-bar",
+   "indent": 1,
+   "collapsible": 1,
+   "keep_closed": 1
+  },
+  {
+   "type": "Link",
+   "label": "Fixed Asset Register",
+   "link_type": "Report",
+   "link_to": "Fixed Asset Register",
+   "icon": "table",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Enhanced Fixed Asset Register",
+   "link_type": "Report",
+   "link_to": "Enhanced Fixed Asset Register",
+   "icon": "table",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Employee Asset Register",
+   "link_type": "Report",
+   "link_to": "Employee Asset Register",
+   "icon": "table",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Branch Asset Register",
+   "link_type": "Report",
+   "link_to": "Branch Asset Register",
+   "icon": "table",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Asset Disposal Register",
+   "link_type": "Report",
+   "link_to": "Asset Disposal Register",
+   "icon": "table",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "CAPEX Budget Utilization",
+   "link_type": "Report",
+   "link_to": "CAPEX Budget Utilization",
+   "icon": "chart-column",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "CAPEX Commitments Report",
+   "link_type": "Report",
+   "link_to": "CAPEX Commitments Report",
+   "icon": "chart-column",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Asset Acquisition Pipeline",
+   "link_type": "Report",
+   "link_to": "Asset Acquisition Pipeline",
+   "icon": "chart-column",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Asset Maintenance Due Report",
+   "link_type": "Report",
+   "link_to": "Asset Maintenance Due Report",
+   "icon": "table",
+   "child": 1
+  },
+  {
+   "type": "Link",
+   "label": "Insurance Expiry Report",
+   "link_type": "Report",
+   "link_to": "Insurance Expiry Report",
+   "icon": "table",
+   "child": 1
+  }
+ ],
+ "module": "NASECO ASSETS",
+ "name": "NASECO ASSETS",
+ "standard": 1,
+ "title": "NASECO ASSETS"
+}

@@ -1,0 +1,189 @@
+{
+ "allow_copy": 0,
+ "allow_import": 0,
+ "allow_rename": 0,
+ "autoname": "format:INS-{YYYY}-{#####}",
+ "creation": "2026-07-08 00:00:00.000000",
+ "custom": 0,
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "is_submittable": 1,
+ "fields": [
+  {
+   "fieldname": "policy_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Policy Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "insurance_company",
+   "fieldtype": "Link",
+   "label": "Insurance Company",
+   "ignore_user_permissions": 1,
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "broker",
+   "fieldtype": "Data",
+   "label": "Broker"
+  },
+  {
+   "fieldname": "policy_type",
+   "fieldtype": "Select",
+   "label": "Policy Type",
+   "options": "Comprehensive\nThird Party\nFire & Theft\nEquipment Breakdown\nProperty\nOther"
+  },
+  {
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "allow_on_submit": 1,
+   "default": "Draft",
+   "in_list_view": 1,
+   "label": "Approval Status",
+   "options": "Draft\nPending Review\nReturned for Revision\nApproved\nActive\nRejected\nCancelled"
+  },
+  {
+   "fieldname": "coverage_basis",
+   "fieldtype": "Select",
+   "label": "Coverage Basis",
+   "options": "Selected Assets\nAsset Category\nItem Code\nBranch\nDepartment\nLocation",
+   "default": "Selected Assets",
+   "reqd": 1
+  },
+  {
+   "fieldname": "asset_item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Asset Item Code",
+   "options": "Item",
+   "depends_on": "eval:doc.coverage_basis==\"Item Code\"",
+   "mandatory_depends_on": "eval:doc.coverage_basis==\"Item Code\""
+  },
+  {
+   "fieldname": "asset_category",
+   "fieldtype": "Link",
+   "label": "Applicable Asset Category",
+   "options": "Asset Category",
+   "description": "Required for Asset Category coverage. For Selected Assets, leave blank to allow any category.",
+   "mandatory_depends_on": "eval:doc.coverage_basis==\"Asset Category\""
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch",
+   "depends_on": "eval:doc.coverage_basis==\"Branch\"",
+   "mandatory_depends_on": "eval:doc.coverage_basis==\"Branch\""
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "depends_on": "eval:doc.coverage_basis==\"Department\"",
+   "mandatory_depends_on": "eval:doc.coverage_basis==\"Department\""
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Location",
+   "depends_on": "eval:doc.coverage_basis==\"Location\"",
+   "mandatory_depends_on": "eval:doc.coverage_basis==\"Location\""
+  },
+  {
+   "fieldname": "coverage_start_date",
+   "fieldtype": "Date",
+   "label": "Coverage Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "coverage_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Coverage End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "premium_amount",
+   "fieldtype": "Currency",
+   "label": "Premium Amount"
+  },
+  {
+   "fieldname": "insured_value",
+   "fieldtype": "Currency",
+   "label": "Insured Value"
+  },
+  {
+   "fieldname": "excess_amount",
+   "fieldtype": "Currency",
+   "label": "Excess Amount"
+  },
+  {
+   "fieldname": "policy_document",
+   "fieldtype": "Attach",
+   "label": "Policy Document"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Scheduled\nActive\nExpiring Soon\nExpired\nCancelled",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "covered_assets",
+   "fieldtype": "Table",
+   "label": "Covered Assets",
+   "allow_on_submit": 1,
+   "options": "Asset Insurance Policy Item"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  }
+ ],
+ "has_web_view": 0,
+ "hide_heading": 0,
+ "hide_toolbar": 0,
+ "idx": 0,
+ "istable": 0,
+ "module": "NASECO ASSETS",
+ "name": "Asset Insurance Policy",
+ "permissions": [
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Asset Administrator"
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "submit": 1,
+   "cancel": 1,
+   "role": "Finance Manager"
+  },
+  {
+   "read": 1,
+   "role": "Internal Auditor"
+  },
+  {
+   "read": 1,
+   "role": "Executive Viewer"
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "policy_number",
+ "search_fields": "policy_number,insurance_company,asset_category",
+ "show_title_field_in_link": 1,
+ "track_changes": 1
+}

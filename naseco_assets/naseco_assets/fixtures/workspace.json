@@ -1,0 +1,593 @@
+{
+ "doctype": "Workspace",
+ "name": "NASECO ASSETS",
+ "label": "NASECO ASSETS",
+ "title": "NASECO ASSETS",
+ "module": "NASECO ASSETS",
+ "icon": "assets",
+ "public": 1,
+ "is_hidden": 0,
+ "custom_blocks": [],
+ "charts": [],
+ "number_cards": [
+  {
+   "label": "Total Gross Fixed Asset Value",
+   "number_card_name": "Total Gross Fixed Asset Value"
+  },
+  {
+   "label": "Total Net Book Value",
+   "number_card_name": "Total Net Book Value"
+  },
+  {
+   "label": "CAPEX Budget Remaining",
+   "number_card_name": "CAPEX Budget Remaining"
+  },
+  {
+   "label": "Insurance Expiring in 30 Days",
+   "number_card_name": "Insurance Expiring in 30 Days"
+  }
+ ],
+ "shortcuts": [
+  {
+   "doc_view": "",
+   "label": "Asset",
+   "link_to": "Asset",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Asset Category",
+   "link_to": "Asset Category",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Item",
+   "link_to": "Item",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Asset Movement",
+   "link_to": "Asset Movement",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Asset Repair",
+   "link_to": "Asset Repair",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Asset Value Adjustment",
+   "link_to": "Asset Value Adjustment",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Asset Maintenance Team",
+   "link_to": "Asset Maintenance Team",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Asset Maintenance",
+   "link_to": "Asset Maintenance",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Fixed Asset Register",
+   "link_to": "Fixed Asset Register",
+   "report_ref_doctype": "Asset",
+   "type": "Report"
+  },
+  {
+   "doc_view": "",
+   "label": "Asset Dashboard",
+   "link_to": "Asset",
+   "type": "Dashboard"
+  },
+  {
+   "doc_view": "",
+   "label": "Fixed Asset Request",
+   "link_to": "Fixed Asset Request",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Fixed Asset CAPEX Plan",
+   "link_to": "Fixed Asset CAPEX Plan",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Material Request",
+   "link_to": "Material Request",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Asset Insurance Policy",
+   "link_to": "Asset Insurance Policy",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Depreciation Schedule Summary",
+   "link_to": "Depreciation Schedule Summary",
+   "report_ref_doctype": "Asset",
+   "type": "Report"
+  },
+  {
+   "doc_view": "",
+   "label": "Uninsured Assets Report",
+   "link_to": "Uninsured Assets Report",
+   "report_ref_doctype": "Asset",
+   "type": "Report"
+  },
+  {
+   "doc_view": "",
+   "label": "Asset Activity",
+   "link_to": "Asset Activity",
+   "report_ref_doctype": "Asset Activity",
+   "type": "Report"
+  },
+  {
+   "doc_view": "",
+   "label": "Enhanced Fixed Asset Register",
+   "link_to": "Enhanced Fixed Asset Register",
+   "report_ref_doctype": "Asset",
+   "type": "Report"
+  },
+  {
+   "doc_view": "",
+   "label": "CAPEX Budget Utilization",
+   "link_to": "CAPEX Budget Utilization",
+   "report_ref_doctype": "Fixed Asset CAPEX Plan",
+   "type": "Report"
+  },
+  {
+   "doc_view": "",
+   "label": "Asset Acquisition Pipeline",
+   "link_to": "Asset Acquisition Pipeline",
+   "report_ref_doctype": "Fixed Asset Request",
+   "type": "Report"
+  }
+ ],
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "ERPNext Asset Core",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset",
+   "link_count": 0,
+   "link_to": "Asset",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Category",
+   "link_count": 0,
+   "link_to": "Asset Category",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Location",
+   "link_count": 0,
+   "link_to": "Location",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Asset",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Movement",
+   "link_count": 0,
+   "link_to": "Asset Movement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Asset",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Value Adjustment",
+   "link_count": 0,
+   "link_to": "Asset Value Adjustment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Asset",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Repair",
+   "link_count": 0,
+   "link_to": "Asset Repair",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Maintenance Team",
+   "link_count": 0,
+   "link_to": "Asset Maintenance Team",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Asset Maintenance Team",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Maintenance",
+   "link_count": 0,
+   "link_to": "Asset Maintenance",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Asset Maintenance",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Maintenance Log",
+   "link_count": 0,
+   "link_to": "Asset Maintenance Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Asset",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fixed Asset Register",
+   "link_count": 0,
+   "link_to": "Fixed Asset Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Asset",
+   "type": "Link"
+  },
+  {
+   "dependencies": "Asset",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Activity",
+   "link_count": 0,
+   "link_to": "Asset Activity",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Asset Activity",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "NASECO Lifecycle",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fixed Asset Request",
+   "link_count": 0,
+   "link_to": "Fixed Asset Request",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fixed Asset CAPEX Plan",
+   "link_count": 0,
+   "link_to": "Fixed Asset CAPEX Plan",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Asset",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Maintenance Plan",
+   "link_count": 0,
+   "link_to": "Asset Maintenance Plan",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Asset",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Usage Reading",
+   "link_count": 0,
+   "link_to": "Asset Usage Reading",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Governance & Risk",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "Asset",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Insurance Policy",
+   "link_count": 0,
+   "link_to": "Asset Insurance Policy",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "Asset Insurance Policy",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Insurance Claim",
+   "link_count": 0,
+   "link_to": "Asset Insurance Claim",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Assets Without Custodian Report",
+   "link_count": 0,
+   "link_to": "Assets Without Custodian Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Asset",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Assets Missing Mandatory Documents Report",
+   "link_count": 0,
+   "link_to": "Assets Missing Mandatory Documents Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Asset",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Insurance Expiry Report",
+   "link_count": 0,
+   "link_to": "Insurance Expiry Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Asset Insurance Policy",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Warranty Expiry Report",
+   "link_count": 0,
+   "link_to": "Warranty Expiry Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Asset",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Uninsured Assets Report",
+   "link_count": 0,
+   "link_to": "Uninsured Assets Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Asset",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports & Analytics",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Enhanced Fixed Asset Register",
+   "link_count": 0,
+   "link_to": "Enhanced Fixed Asset Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Asset",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CAPEX Budget Utilization",
+   "link_count": 0,
+   "link_to": "CAPEX Budget Utilization",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Fixed Asset CAPEX Plan",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Acquisition Pipeline",
+   "link_count": 0,
+   "link_to": "Asset Acquisition Pipeline",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Fixed Asset Request",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CAPEX Commitments Report",
+   "link_count": 0,
+   "link_to": "CAPEX Commitments Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Purchase Order",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Maintenance Due Report",
+   "link_count": 0,
+   "link_to": "Asset Maintenance Due Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Asset Maintenance Plan",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Usage Report",
+   "link_count": 0,
+   "link_to": "Asset Usage Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Asset Usage Reading",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Disposal Register",
+   "link_count": 0,
+   "link_to": "Asset Disposal Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Asset",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Depreciation Schedule Summary",
+   "link_count": 0,
+   "link_to": "Depreciation Schedule Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Asset",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Total Cost of Ownership Report",
+   "link_count": 0,
+   "link_to": "Total Cost of Ownership Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Asset",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Replacement Forecast",
+   "link_count": 0,
+   "link_to": "Asset Replacement Forecast",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Asset",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Asset Register",
+   "link_count": 0,
+   "link_to": "Employee Asset Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Asset",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Branch Asset Register",
+   "link_count": 0,
+   "link_to": "Branch Asset Register",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Asset",
+   "type": "Link"
+  }
+ ],
+ "content": "[{\"id\":\"na-01\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>NASECO ASSETS Overview</b></span>\",\"col\":12}},{\"id\":\"na-02\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Gross Fixed Asset Value\",\"col\":4}},{\"id\":\"na-03\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Net Book Value\",\"col\":4}},{\"id\":\"na-05\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"CAPEX Budget Remaining\",\"col\":4}},{\"id\":\"na-06\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Insurance Expiring in 30 Days\",\"col\":4}},{\"id\":\"na-10\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"na-11\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Access</b></span>\",\"col\":12}},{\"id\":\"na-12\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Asset\",\"col\":3}},{\"id\":\"na-13\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Asset Category\",\"col\":3}},{\"id\":\"na-13a\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":3}},{\"id\":\"na-14\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Asset Movement\",\"col\":3}},{\"id\":\"na-15\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Asset Repair\",\"col\":3}},{\"id\":\"na-17\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Asset Value Adjustment\",\"col\":3}},{\"id\":\"na-18\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Asset Maintenance Team\",\"col\":3}},{\"id\":\"na-19\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Asset Maintenance\",\"col\":3}},{\"id\":\"na-20\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Fixed Asset Register\",\"col\":3}},{\"id\":\"na-21\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Asset Dashboard\",\"col\":3}},{\"id\":\"na-22\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Fixed Asset Request\",\"col\":3}},{\"id\":\"na-23\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Fixed Asset CAPEX Plan\",\"col\":3}},{\"id\":\"na-23a\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Material Request\",\"col\":3}},{\"id\":\"na-25\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Asset Insurance Policy\",\"col\":3}},{\"id\":\"na-24\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Depreciation Schedule Summary\",\"col\":3}},{\"id\":\"na-24a\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Uninsured Assets Report\",\"col\":3}},{\"id\":\"na-28\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"na-29\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Key Reports</b></span>\",\"col\":12}},{\"id\":\"na-30\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Fixed Asset Register\",\"col\":3}},{\"id\":\"na-31\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Asset Activity\",\"col\":3}},{\"id\":\"na-32\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Enhanced Fixed Asset Register\",\"col\":3}},{\"id\":\"na-33\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CAPEX Budget Utilization\",\"col\":3}},{\"id\":\"na-34\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Asset Acquisition Pipeline\",\"col\":3}},{\"id\":\"na-35\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"na-36\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Workspace Sections</b></span>\",\"col\":12}},{\"id\":\"na-37\",\"type\":\"card\",\"data\":{\"card_name\":\"ERPNext Asset Core\",\"col\":4}},{\"id\":\"na-38\",\"type\":\"card\",\"data\":{\"card_name\":\"NASECO Lifecycle\",\"col\":4}},{\"id\":\"na-39\",\"type\":\"card\",\"data\":{\"card_name\":\"Governance & Risk\",\"col\":4}},{\"id\":\"na-40\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports & Analytics\",\"col\":4}}]",
+ "roles": [],
+ "quick_lists": []
+}

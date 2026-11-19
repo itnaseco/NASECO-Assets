@@ -1,0 +1,23 @@
+{
+ "app": "naseco_assets",
+ "creation": "2026-11-09 14:14:47.691529",
+ "docstatus": 0,
+ "doctype": "Dock",
+ "idx": 0,
+ "items": [
+  {
+   "added": 1,
+   "hidden": 0,
+   "icon": "asset-hand-soft",
+   "link_to": "NASECO ASSETS",
+   "link_type": "Sidebar",
+   "title": "NASECO ASSETS"
+  }
+ ],
+ "modified": "2026-11-09 18:45:41.625132",
+ "modified_by": "Administrator",
+ "name": "naseco_assets",
+ "owner": "Administrator",
+ "standard": 1,
+ "user": ""
+}

@@ -1,0 +1,31 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "doctype": "Report",
+ "filters": [
+  {"fieldname": "asset", "fieldtype": "Link", "label": "Asset", "options": "Asset"},
+  {"fieldname": "policy_number", "fieldtype": "Data", "label": "Policy Number"},
+  {"fieldname": "insurance_company", "fieldtype": "Link", "label": "Insurance Company", "options": "Supplier"},
+  {"fieldname": "policy_type", "fieldtype": "Data", "label": "Policy Type"},
+  {"fieldname": "expires_within_days", "fieldtype": "Int", "label": "Expires Within Days", "default": 30},
+  {"fieldname": "branch", "fieldtype": "Link", "label": "Branch", "options": "Branch"},
+  {"fieldname": "department", "fieldtype": "Link", "label": "Department", "options": "Department"},
+  {"fieldname": "asset_category", "fieldtype": "Link", "label": "Asset Category", "options": "Asset Category"},
+  {"fieldname": "custodian", "fieldtype": "Link", "label": "Custodian", "options": "Employee"},
+  {"fieldname": "location", "fieldtype": "Link", "label": "Location", "options": "Location"},
+  {"fieldname": "from_date", "fieldtype": "Date", "label": "From Date"},
+  {"fieldname": "to_date", "fieldtype": "Date", "label": "To Date"}
+ ],
+ "is_standard": "Yes",
+ "module": "NASECO ASSETS",
+ "name": "Insurance Expiry Report",
+ "ref_doctype": "Asset Insurance Policy",
+ "report_name": "Insurance Expiry Report",
+ "report_type": "Script Report",
+ "roles": [
+  {"role": "Asset Administrator"},
+  {"role": "Finance Manager"},
+  {"role": "Internal Auditor"},
+  {"role": "Executive Viewer"}
+ ]
+}

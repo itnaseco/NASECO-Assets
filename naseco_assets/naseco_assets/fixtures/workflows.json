@@ -1,0 +1,496 @@
+[
+ {
+  "workflow_name": "Fixed Asset Request Workflow",
+  "document_type": "Fixed Asset Request",
+  "is_active": 1,
+  "override_status": 0,
+  "send_email_alert": 1,
+  "workflow_state_field": "approval_status",
+  "states": [
+   {
+    "state": "Draft",
+    "doc_status": 0,
+    "allow_edit": "Department Manager",
+    "update_field": "approval_status",
+    "update_value": "Draft"
+   },
+   {
+    "state": "Pending Department Approval",
+    "doc_status": 0,
+    "allow_edit": "Department Manager",
+    "update_field": "approval_status",
+    "update_value": "Pending Department Approval"
+   },
+   {
+    "state": "Pending Finance Review",
+    "doc_status": 0,
+    "allow_edit": "Finance Manager",
+    "update_field": "approval_status",
+    "update_value": "Pending Finance Review"
+   },
+   {
+    "state": "Pending Management Approval",
+    "doc_status": 0,
+    "allow_edit": "Finance Manager",
+    "update_field": "approval_status",
+    "update_value": "Pending Management Approval"
+   },
+   {
+    "state": "Approved",
+    "doc_status": 1,
+    "allow_edit": "Asset Administrator",
+    "update_field": "approval_status",
+    "update_value": "Approved"
+   },
+   {
+    "state": "Rejected",
+    "doc_status": 0,
+    "allow_edit": "Asset Administrator",
+    "update_field": "approval_status",
+    "update_value": "Rejected"
+   },
+   {
+    "state": "Deferred",
+    "doc_status": 0,
+    "allow_edit": "Asset Administrator",
+    "update_field": "approval_status",
+    "update_value": "Deferred"
+   }
+  ],
+  "transitions": [
+   {
+    "state": "Draft",
+    "action": "Submit",
+    "next_state": "Pending Department Approval",
+    "allowed": "Department Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Pending Department Approval",
+    "action": "Approve Department",
+    "next_state": "Pending Finance Review",
+    "allowed": "Department Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Pending Finance Review",
+    "action": "Approve Finance",
+    "next_state": "Pending Management Approval",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Pending Management Approval",
+    "action": "Approve Management",
+    "next_state": "Approved",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Pending Department Approval",
+    "action": "Reject",
+    "next_state": "Rejected",
+    "allowed": "Department Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Pending Finance Review",
+    "action": "Reject",
+    "next_state": "Rejected",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Pending Management Approval",
+    "action": "Reject",
+    "next_state": "Rejected",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Pending Finance Review",
+    "action": "Defer",
+    "next_state": "Deferred",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   }
+  ]
+ },
+ {
+  "workflow_name": "CIP Capitalization Request Workflow",
+  "document_type": "CIP Capitalization Request",
+  "is_active": 1,
+  "override_status": 0,
+  "send_email_alert": 1,
+  "workflow_state_field": "finance_review_status",
+  "states": [
+   {
+    "state": "Draft",
+    "doc_status": 0,
+    "allow_edit": "Asset Administrator",
+    "update_field": "finance_review_status",
+    "update_value": "Draft"
+   },
+   {
+    "state": "Pending Review",
+    "doc_status": 0,
+    "allow_edit": "Finance Manager",
+    "update_field": "finance_review_status",
+    "update_value": "Pending Review"
+   },
+   {
+    "state": "Approved",
+    "doc_status": 1,
+    "allow_edit": "Finance Manager",
+    "update_field": "finance_review_status",
+    "update_value": "Approved"
+   },
+   {
+    "state": "Rejected",
+    "doc_status": 0,
+    "allow_edit": "Finance Manager",
+    "update_field": "finance_review_status",
+    "update_value": "Rejected"
+   }
+  ],
+  "transitions": [
+   {
+    "state": "Draft",
+    "action": "Submit",
+    "next_state": "Pending Review",
+    "allowed": "Asset Administrator",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Pending Review",
+    "action": "Approve Capitalization",
+    "next_state": "Approved",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Pending Review",
+    "action": "Reject",
+    "next_state": "Rejected",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   }
+  ]
+ },
+ {
+  "workflow_name": "Fixed Asset CAPEX Plan Workflow",
+  "document_type": "Fixed Asset CAPEX Plan",
+  "is_active": 1,
+  "override_status": 0,
+  "send_email_alert": 1,
+  "workflow_state_field": "status",
+  "states": [
+   {
+    "state": "Draft",
+    "doc_status": 0,
+    "allow_edit": "Asset Administrator",
+    "update_field": "status",
+    "update_value": "Draft"
+   },
+   {
+    "state": "Pending Review",
+    "doc_status": 0,
+    "allow_edit": "Finance Manager",
+    "update_field": "status",
+    "update_value": "Pending Review"
+   },
+   {
+    "state": "Returned for Revision",
+    "doc_status": 0,
+    "allow_edit": "Asset Administrator",
+    "update_field": "status",
+    "update_value": "Returned for Revision"
+   },
+   {
+    "state": "Approved",
+    "doc_status": 0,
+    "allow_edit": "Finance Manager",
+    "update_field": "status",
+    "update_value": "Approved"
+   },
+   {
+    "state": "Frozen",
+    "doc_status": 0,
+    "allow_edit": "Finance Manager",
+    "update_field": "status",
+    "update_value": "Frozen"
+   },
+   {
+    "state": "Closed",
+    "doc_status": 0,
+    "allow_edit": "Finance Manager",
+    "update_field": "status",
+    "update_value": "Closed"
+   }
+  ],
+  "transitions": [
+   {
+    "state": "Draft",
+    "action": "Submit for Review",
+    "next_state": "Pending Review",
+    "allowed": "Asset Administrator",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Returned for Revision",
+    "action": "Submit for Review",
+    "next_state": "Pending Review",
+    "allowed": "Asset Administrator",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Pending Review",
+    "action": "Approve Budget",
+    "next_state": "Approved",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Pending Review",
+    "action": "Return for Revision",
+    "next_state": "Returned for Revision",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Approved",
+    "action": "Freeze Plan",
+    "next_state": "Frozen",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Approved",
+    "action": "Return for Revision",
+    "next_state": "Returned for Revision",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Frozen",
+    "action": "Close Plan",
+    "next_state": "Closed",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Frozen",
+    "action": "Return for Revision",
+    "next_state": "Returned for Revision",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   }
+  ]
+ },
+ {
+  "workflow_name": "Asset Insurance Claim Workflow",
+  "document_type": "Asset Insurance Claim",
+  "is_active": 1,
+  "override_status": 0,
+  "send_email_alert": 1,
+  "workflow_state_field": "claim_status",
+  "states": [
+   {
+    "state": "Draft",
+    "doc_status": 0,
+    "allow_edit": "Asset Administrator",
+    "update_field": "claim_status",
+    "update_value": "Draft"
+   },
+   {
+    "state": "Submitted",
+    "doc_status": 0,
+    "allow_edit": "Asset Administrator",
+    "update_field": "claim_status",
+    "update_value": "Submitted"
+   },
+   {
+    "state": "Under Review",
+    "doc_status": 0,
+    "allow_edit": "Finance Manager",
+    "update_field": "claim_status",
+    "update_value": "Under Review"
+   },
+   {
+    "state": "Approved",
+    "doc_status": 0,
+    "allow_edit": "Finance Manager",
+    "update_field": "claim_status",
+    "update_value": "Approved"
+   },
+   {
+    "state": "Rejected",
+    "doc_status": 0,
+    "allow_edit": "Finance Manager",
+    "update_field": "claim_status",
+    "update_value": "Rejected"
+   },
+   {
+    "state": "Settled",
+    "doc_status": 1,
+    "allow_edit": "Finance Manager",
+    "update_field": "claim_status",
+    "update_value": "Settled"
+   }
+  ],
+  "transitions": [
+   {
+    "state": "Draft",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "Asset Administrator",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Submitted",
+    "action": "Review",
+    "next_state": "Under Review",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Under Review",
+    "action": "Approve Review",
+    "next_state": "Approved",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Under Review",
+    "action": "Reject",
+    "next_state": "Rejected",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Approved",
+    "action": "Settle",
+    "next_state": "Settled",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   }
+  ]
+ },
+ {
+  "workflow_name": "Asset Insurance Policy Workflow",
+  "document_type": "Asset Insurance Policy",
+  "is_active": 1,
+  "override_status": 0,
+  "send_email_alert": 1,
+  "workflow_state_field": "approval_status",
+  "states": [
+   {
+    "state": "Draft",
+    "doc_status": 0,
+    "allow_edit": "Asset Administrator",
+    "update_field": "approval_status",
+    "update_value": "Draft"
+   },
+   {
+    "state": "Pending Review",
+    "doc_status": 0,
+    "allow_edit": "Finance Manager",
+    "update_field": "approval_status",
+    "update_value": "Pending Review"
+   },
+   {
+    "state": "Returned for Revision",
+    "doc_status": 0,
+    "allow_edit": "Asset Administrator",
+    "update_field": "approval_status",
+    "update_value": "Returned for Revision"
+   },
+   {
+    "state": "Approved",
+    "doc_status": 1,
+    "allow_edit": "Finance Manager",
+    "update_field": "approval_status",
+    "update_value": "Approved"
+   },
+   {
+    "state": "Active",
+    "doc_status": 1,
+    "allow_edit": "Finance Manager",
+    "update_field": "approval_status",
+    "update_value": "Active"
+   },
+   {
+    "state": "Rejected",
+    "doc_status": 0,
+    "allow_edit": "Asset Administrator",
+    "update_field": "approval_status",
+    "update_value": "Rejected"
+   },
+   {
+    "state": "Cancelled",
+    "doc_status": 2,
+    "allow_edit": "Finance Manager",
+    "update_field": "approval_status",
+    "update_value": "Cancelled"
+   }
+  ],
+  "transitions": [
+   {
+    "state": "Draft",
+    "action": "Submit for Review",
+    "next_state": "Pending Review",
+    "allowed": "Asset Administrator",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Returned for Revision",
+    "action": "Submit for Review",
+    "next_state": "Pending Review",
+    "allowed": "Asset Administrator",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Pending Review",
+    "action": "Approve Review",
+    "next_state": "Approved",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Pending Review",
+    "action": "Return for Revision",
+    "next_state": "Returned for Revision",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Pending Review",
+    "action": "Reject",
+    "next_state": "Rejected",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Rejected",
+    "action": "Return for Revision",
+    "next_state": "Returned for Revision",
+    "allowed": "Asset Administrator",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Approved",
+    "action": "Activate",
+    "next_state": "Active",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   },
+   {
+    "state": "Active",
+    "action": "Close",
+    "next_state": "Cancelled",
+    "allowed": "Finance Manager",
+    "allow_self_approval": 0
+   }
+  ]
+ }
+]

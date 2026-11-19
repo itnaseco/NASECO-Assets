@@ -1,0 +1,25 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "doctype": "Report",
+ "filters": [
+  {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "Company"},
+  {"fieldname": "branch", "fieldtype": "Link", "label": "Branch", "options": "Branch"},
+  {"fieldname": "department", "fieldtype": "Link", "label": "Department", "options": "Department"},
+  {"fieldname": "asset_category", "fieldtype": "Link", "label": "Asset Category", "options": "Asset Category"},
+  {"fieldname": "custodian", "fieldtype": "Link", "label": "Custodian", "options": "Employee"},
+  {"fieldname": "location", "fieldtype": "Link", "label": "Location", "options": "Location"}
+ ],
+ "is_standard": "Yes",
+ "module": "NASECO ASSETS",
+ "name": "Branch Asset Register",
+ "ref_doctype": "Asset",
+ "report_name": "Branch Asset Register",
+ "report_type": "Script Report",
+ "roles": [
+  {"role": "Asset Administrator"},
+  {"role": "Finance Manager"},
+  {"role": "Internal Auditor"},
+  {"role": "Executive Viewer"}
+ ]
+}
